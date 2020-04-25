@@ -4,20 +4,25 @@ var scoresList = document.querySelector("#scoreslist");
 //how to make them ordered?
 function showList() {
     var scores = localStorage.getItem("scores");
-    scores = JSON.parse(scores);
-    if (scores!==null) {
-        var item = scores[i];
-        for (i=0; i<scores.length; i++) {
-            var li = document.createElement("li");
-            li.textContent = item;
-            li.setAttribute("data-index", i);
-            scoresList.appendChild(li);
-        }  
-    }
-    else {
-        return;
-    }
+    scores = JSON.parse(scores).sort((a,b)=> Number(a.split(' - ')[0]) <  Number(b.split(' - ')[0]) ? 1 :
+    Number(a.split(' - ')[0]) >  Number(b.split(' - ')[0]) ? -1 : 0)
+    console.log(scores)
+    // if (scores!==null) {
+    //     var item = scores[i];
+    //     for (i=0; i<scores.length; i++) {
+    //         var li = document.createElement("li");
+    //         li.textContent = item;
+    //         li.setAttribute("data-index", i);
+    //         scoresList.appendChild(li);
+    //     }  
+    // }
+    // else {
+    //     return;
+    // }
+    //scores.map, scores.forEach  for(let i=0) for(let score of scores){}
 }
+
+showList()
 
 //Function to clear highscore list
 var clearBtn = document.querySelector("#clearbutton");
