@@ -36,7 +36,12 @@ body {
     float: left;
 }
 
-#main h1, p {
+#content {
+    margin: 0;
+    padding: 0;
+}
+
+#content h1, p {
     text-align: center;
 }
 

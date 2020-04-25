@@ -39,6 +39,7 @@ body {
 
 li {
     display: block;
+    background-color: rgb(233, 181, 233);
 }
 
 #backbutton {
