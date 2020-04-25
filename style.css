@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0;
+}
+
+#header {
+    padding: 10px;
+    margin-bottom: 30px;
+    float: left;
+}
+
+#highscores {
+    color: black;
+    float: left;
+    text-align: left;
+}
+
+#timer {
+    float: right;
+    text-align: right;
+}
+
+#main {
+    margin: 0 auto;
+    float: left;
+}
+
+#main h1, p {
+    text-align: center;
+}
+
+#button {
+    background-color: rgb(223, 144, 223);
+    margin: auto;
+    display: flex;
+}
+
+#button:hover {
+    background-color: rgb(187, 48, 187);
+}

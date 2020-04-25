@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 0;
+    justify-content: center;
+}
+
+#main {
+    margin-top: 50px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+}
+
+#highscores h1 {
+    text-align: center;
+    float: left;
+}
+
+#scoreslist {
+    float: left;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#backbutton {
+    background-color: rgb(223, 144, 223);
+    color: black;
+    margin-right: 10px;
+    float: left;
+}
+
+#backbutton a {
+    color: black;
+}
+
+#backbutton:hover {
+    background-color: rgb(187, 48, 187);
+}
+
+#clearbutton {
+    background-color: rgb(223, 144, 223);
+    float: left;
+}
+
+#clearbutton:hover {
+    background-color: rgb(187, 48, 187);
+    text-decoration: underline;
+    float: left;
+}
