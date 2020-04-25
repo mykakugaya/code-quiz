@@ -1,1 +1,3 @@
-# code-quiz
+http://mykakugaya.github.io/code-quiz/
+
+Code Quiz
