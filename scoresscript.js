@@ -28,10 +28,14 @@ showList();
 var clearBtn = document.querySelector("#clearbutton");
 
 clearBtn.addEventListener("click", function() {
-    if (scores.length!==0) {
-        for (i=0; i<scores.length; i++) {
-            localStorage.clear("scores");
-            showList();
-        }
+    if (scoresList.length!==0) {
+        //Reset scores to empty array
+        var scores = localStorage.getItem("scores");
+        localStorage.removeItem("scores");
+        var noscores = [];
+        localStorage.setItem("scores", JSON.stringify(noscores));
+
+        scoresList.innerHTML = "";
+        showList();
     }
 })
