@@ -40,9 +40,9 @@ var timerInterval;
 //Function to end quiz and submit score
 function endQuiz() {
     //Stop timer
-    secondsLeft = 0;
     clearInterval(timerInterval);
-    
+    timer.textContent = "Time: 0";
+
     //Show final score
     var quiz = document.getElementById('quiz');
     quiz.innerHTML = "<h4>All done!</h4>";
@@ -52,9 +52,10 @@ function endQuiz() {
     
     //Initials input
     var p2 = document.createElement("p");
-    p2.textContent = "Enter initials: ";
+    p2.innerHTML = "<br>Enter initials: ";
     quiz.appendChild(p2);
-    quiz.appendChild(document.createElement('input'));
+    var input = document.createElement('input');
+    quiz.appendChild(input);
     var btn = document.createElement('button');
     btn.textContent = "Submit";
     quiz.appendChild(btn);
@@ -95,13 +96,10 @@ function show() {
             li.setAttribute("data-index", i);
             ul.appendChild(li);
             li.addEventListener('click', function(event){
-                compare(this.getAttribute('data-index'))
+                compare(this.getAttribute('data-index'));
             })
         }
-        
-        //if last answer was correct, show "Correct!"
-        //if last answer was incorrect, show "Wrong!"
-    } 
+    }
 }
 
 //Function to determine if answer is correct or incorrect
@@ -109,13 +107,25 @@ function compare(index) {
     //if answer chosen is correct, score +1
     if(index == questions[current].answer){
         userScore += 1;
+        //display next question with correct!
+        current++;
+        show();
+        var correct = document.createElement("p");
+        correct.innerHTML = "<hr>Correct!"
+        correct.setAttribute("style", "color:gray;font-style:italic;");
+        quiz.appendChild(correct);
     }
     //if answer chosen is incorrect, score -1
     else{
         userScore -= 1; 
-    }
-    current ++;
-    show();
+        //display next question with wrong!
+        current ++;
+        show();
+        var wrong = document.createElement("p");
+        wrong.innerHTML = "<hr>Wrong!"
+        wrong.setAttribute("style", "color:gray;font-style:italic;");
+        quiz.appendChild(wrong);
+    } 
 }
 
 //Function to start timer
