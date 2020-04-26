@@ -25,12 +25,14 @@ body {
 #highscores h1 {
     text-align: center;
     float: left;
+    margin-bottom: 10px;
 }
 
 #blank {
     float: left;
     margin-top: 10px;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 #scoreslist {
@@ -39,31 +41,36 @@ body {
 
 li {
     display: block;
-    background-color: rgb(233, 181, 233);
+    background-color: rgb(250, 208, 250);
+    margin-bottom: 10px;
 }
 
 #backbutton {
-    background-color: rgb(223, 144, 223);
+    background-color: rgb(90, 8, 90);
     color: black;
     margin-right: 10px;
     float: left;
 }
 
-#backbutton a {
-    color: black;
+#backbutton:hover {
+    background-color: rgb(223, 144, 223);
 }
 
-#backbutton:hover {
-    background-color: rgb(187, 48, 187);
+#backbutton a {
+    color: white;
+}
+
+#backbutton a:hover {
+    text-decoration: none;
 }
 
 #clearbutton {
-    background-color: rgb(223, 144, 223);
+    color: white;
+    background-color: rgb(90, 8, 90);
     float: left;
 }
 
 #clearbutton:hover {
-    background-color: rgb(187, 48, 187);
-    text-decoration: underline;
+    background-color: rgb(223, 144, 223);
     float: left;
 }

@@ -45,12 +45,57 @@ body {
     text-align: center;
 }
 
-#button {
+#quiz {
+    margin: 0 auto;
+    padding: 0;
+    justify-content: center;
+}
+
+#quiz h4 {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+#quiz p {
+    text-align: left;
+}
+
+#quiz ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#quiz li {
+    color: white;
+    background-color: rgb(90, 8, 90);
+    margin-bottom: 5px;
+}
+
+#quiz li:hover {
     background-color: rgb(223, 144, 223);
+}
+
+#quiz input {
+    margin: auto;
+}
+
+#quiz button {
+    color: white;
+    background-color: rgb(90, 8, 90);
+    margin: auto;
+}
+
+#quiz button:hover {
+    background-color: rgb(223, 144, 223);
+}
+
+#button {
+    color: white;
+    background-color: rgb(90, 8, 90);
     margin: auto;
     display: flex;
 }
 
 #button:hover {
-    background-color: rgb(187, 48, 187);
+    background-color: rgb(223, 144, 223);
 }
