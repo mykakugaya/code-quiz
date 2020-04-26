@@ -12,6 +12,7 @@ body {
 .container {
     margin: 0 auto;
     padding: 0;
+    width: 100%;
 }
 
 #header {
@@ -73,6 +74,9 @@ body {
     color: white;
     background-color: rgb(90, 8, 90);
     margin-bottom: 5px;
+    width: fit-content;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 #quiz li:hover {

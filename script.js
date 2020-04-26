@@ -52,12 +52,14 @@ function endQuiz() {
     
     //Initials input
     var p2 = document.createElement("p");
-    p2.innerHTML = "<br>Enter initials: ";
+    p2.innerHTML = "Enter initials: ";
+    p2.setAttribute("style", "width:auto;");
     quiz.appendChild(p2);
     var input = document.createElement('input');
     quiz.appendChild(input);
     var btn = document.createElement('button');
     btn.textContent = "Submit";
+    btn.setAttribute("class", "rounded");
     quiz.appendChild(btn);
 
     //Push items to scores array
@@ -94,6 +96,7 @@ function show() {
             var li = document.createElement("li");
             li.textContent = num.choices[i];
             li.setAttribute("data-index", i);
+            li.setAttribute("class", "rounded");
             ul.appendChild(li);
             li.addEventListener('click', function(event){
                 compare(this.getAttribute('data-index'));
